@@ -22,3 +22,19 @@
   padding: 8px 20px;
   transition: all 0.3x ease-out;
 }
+
+.btn-medium {
+  padding: 8px 20px;
+  font-size: 20px;
+}
+
+.btn--large {
+  padding: 12px 20px;
+  font-size: 20px;
+}
+
+.btn--medium:hover, .btn--large:hover {
+  background: #fff;
+  color: #242424;
+  transition: all 0.3x ease-out;
+}
