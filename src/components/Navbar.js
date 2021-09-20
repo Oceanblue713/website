@@ -1,6 +1,7 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import { Link } from 'react-router-dom';
 import Button from './Button';
+import './Navbar.css';
 
 function Navbar() {
 
@@ -15,15 +16,20 @@ function Navbar() {
     }
   };
 
-  window.addEventListener('resize', showButton);
-
   const handleClick = () => {
     setClick(!click);
   }
 
+  window.addEventListener('resize', showButton);
+
   const closeMobileMenu = () => {
     setClick(false);
   }
+
+  useEffect(() => {
+    showButton()
+  }, [])
+
   return (
     <>
       <nav className="navbar">
